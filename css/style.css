@@ -1,0 +1,405 @@
+*{
+  box-sizing: border-box;
+  font-family: 'Architects Daughter', cursive;
+  margin: 10;
+
+}
+html{
+  width: 100%;
+  height:100%;
+}
+
+body{
+  background:url('Images/mobileGameScreen.png');
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  left: 0px;
+  top: 200px;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.7;
+  background-size: cover;
+  background-position: center;
+}
+
+body.newBg{
+  width: 100%;
+  height:100%;
+  background:url('Images/contentimg.png');
+  background-size: cover; /* or contain depending on what you want */
+  background-position: center center;
+  background-repeat: no-repeat;
+  text-align:center;
+  margin:0;
+  padding: 0;
+  color: white;
+}
+
+body.winImage{
+  background:url('Images/winner.png');
+  width: 100%;
+  height: 100%;
+  top: 200px;
+  z-index: -1; /* Ensure div tag stays behind content; -999 might work, too. */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.7;
+  background-size:100% auto;
+  background-repeat: no-repeat;
+  background-position: center;
+
+
+}
+body.fail{
+  background:url('Images/tryagain.jpg');
+  width: 100%;
+  height: 100%;
+  top: 200px;
+  z-index: -1; /* Ensure div tag stays behind content; -999 might work, too. */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.7;
+  background-size:100% auto;
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+
+/*WELCOME SCREEN*/
+.welcome {
+  color: white;
+}
+
+body .welcome{
+  margin-top: 120px;
+}
+
+.welcome p{
+  font-size: 2.5vw;
+  margin-bottom: 40px;
+  margin: 20px;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-family: 'Architects Daughter', cursive;
+  text-align: center;
+  font-size: 30px;
+  color: white;
+}
+
+p{
+  text-align: center;
+  font-size:1.5vw;
+}
+
+.content {
+  margin-top: 100px;
+  display: flex;
+  max-width: 80%;
+
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  perspective: 1000px;
+  perspective-origin: 40% 400px;
+
+
+}
+
+.card {
+  margin: 5px;
+  border-radius: 5px;
+  background: #383838   ;
+  color: white;
+  text-align: center;
+  line-height: 100px;
+  font-weight: 600;
+  height: 15vh;
+  width: 10vw;
+  transform: rotateX(30deg);
+  text-shadow: 2px 2px 4px yellow;
+}
+
+
+.card:hover {
+
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+
+@-webkit-keyframes pulse {
+  25% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  75% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
+@keyframes pulse {
+  25% {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  75% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
+/*GAMEBOARDINSTRUCTIONS, NAME, PAIRS MATCHED AND TIME*/
+.left{
+  max-width: 100%;
+  max-height: 40%;
+  margin-top :20px;
+}
+
+.question-image {
+  top: 95%;
+  left: -20px;
+  z-index: 10;
+  height: 150px;
+  width: 120px;
+  margin-top: 50px;
+  opacity: 0.5;
+  background-color: red;
+  animation-duration: 2s;
+  animation-name: goRight;
+  animation-iteration-count: infinite;
+}
+
+@keyframes goRight {
+  from {
+    transform: translate(0,0);
+  }
+
+  to {
+    transform: translate(1920px,0);
+  }
+}
+
+.rules{
+  text-align: center;
+  font-size: 1.5vw;
+  font-family: 'Architects Daughter', cursive;
+}
+
+
+
+.card .unpaired .selected{
+  width: 10px;
+  color: #cccccc;
+}
+
+.startGameTag{
+  color: yellow;
+  font-size:1.5vw;
+  margin: 0px;
+  text-transform: uppercase;
+}
+
+.card p {
+  font-size: 4vw;
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 10px;
+  height: 2.2vw;
+  width: 1.8vw;
+  transform: rotateX(30deg);
+  text-shadow: 4px 4px 8px yellow;
+}
+
+
+/*BUTTONS*/
+
+
+
+
+.startGameButton{
+  font-size:1.5vw;
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 20px;
+  padding: 1px;
+}
+
+
+
+
+#restartGameButton{
+  font-size: 40px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+  text-align: center;
+  margin: 0 auto;
+}
+
+
+
+/*GAMEBOARD TEXT*/
+.currentPlayer{
+  font-size:1.5vw;
+  margin: 0px;
+  margin-top: 10px;
+}
+.scoreText{
+  font-size:1.5vw;
+  margin: 0px;
+
+}
+
+.player1Score {
+  font-size:2vw;
+  margin: 0px;
+  color: yellow;
+}
+
+#timer{
+  font-size:2vw;
+  color: yellow;
+}
+
+.levelButtons{
+  text-align: center;
+  padding: 0px;
+  font-size: 30px;
+  margin-top: 20px;
+
+}
+
+.start{
+  font-size:3vw;
+    color: white;
+}
+
+
+.restart-current-level{
+  font-size: 3vw;
+
+}
+
+
+.restart{
+  font-size: 3vw;
+}
+.restart2{
+  font-size: 3vw;
+}
+.restart3{
+  display: none;
+}
+.restart4{
+  display: none;
+}
+
+
+
+
+
+/*WIN SCREEN*/
+.winScreen{
+  margin: 0 auto;
+  margin-bottom: 100px;
+  max-width: 100%;
+  justify-content: center;
+  text-align: center;
+  border-radius:50%;
+  color: white;
+  font-size: 200px;
+}
+p #winScreenMessage{
+  font-size: 100px;
+}
+
+
+
+
+/*LOSS SCREEN*/
+
+.lossScreen{
+  margin: 0 auto;
+  max-width: 80%;
+  padding: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  perspective: 1000px;
+  perspective-origin: 50% 400px;
+  margin: 0 auto;
+  text-align: center;
+
+  text-align: center;
+}
+.lossScreen p {
+  font-size: 35px;
+  color: #0000ff;
+
+}
+
+.targetName{
+  font-size: 40px;
+  color: yellow;
+  margin: 0px;
+}
+
+#playerName {
+  text-align: center;
+  display: flex;
+  padding: 4px;
+  margin: 0 auto;
+  font-size: 2vw;
+  margin-top: 10px;
+  background-color: white;
+  color: #B12929;
+}
+
+
+
+.clock{
+  text-align: center;
+  color: white;
+}
+
+/* ANIMATION  */
+
+
+
+
+/* NEON */
+
+
+a {
+  text-decoration: none;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+  font-size: 70px;
+  color: white;
+}
+
+
+p a:hover {
+  color: red;
+}

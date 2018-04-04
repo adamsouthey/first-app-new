@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>GAME</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="./js/script.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <header>
+<title>Memarray Game</title>
+
+  </header>
+
+  <div class="welcome">
+    <p>Enter your name:</p>
+
+    <input type="text" id="playerName" placeholder='Your Name Here'>
+    <p>Select a level of difficulty:</p>
+    <div class = 'levelButtons'>
+      <button class="start" data-level="1">Easy</button>
+      <button class="start" data-level="2">Medium</button>
+      <button class="start" data-level="3">Hard</button>
+      <button class="start" data-level="4">V Hard</button>
+      <button class="start" data-level="5">Elephant</button>
+    </div>
+  </div>
+
+  <section class = 'left'>
+    <div class = "rules">Instructions</div>
+    <P>Collect 8 matching pairs before the time runs out<br>The harder the difficulty, the less time you have!<br></P>
+    <p class = 'startGameTag'>Press start game to start the timer!</p>
+
+    <p class = 'currentPlayer'>Current Player</p>
+    <p class = 'targetName'></p>
+
+
+    <div class = 'playerScoreBox'>
+
+      <p class = "scoreText">Pairs Matched</p>
+      <p class = "player1Score">0 /8 </p>
+
+      <p class = "scoreText">Time Remaining</p>
+      <div class = 'clock' id='timer'>60</div>
+    </div>
+    <div class = 'buttons'>
+      <button class="startGameButton">Start Game</button>
+    </div>
+
+    </section>
+    <br>
+    <br>
+    <br>
+
+    <div class="content">
+      <div class = "card unpaired"></div>
+      <div class = "card unpaired "></div>
+      <div class = "card unpaired"></div>
+      <div class = "card unpaired"></div>
+      <div class = "card unpaired"></div>
+      <div class = "card unpaired"></div>
+      <div class = "card unpaired"></div>
+      <div class = "card unpaired"></div>
+      <div class = "card unpaired"></div>
+      <div class = "card unpaired"></div>
+      <div class = "card unpaired"></div>
+      <div class = "card unpaired"></div>
+      <div class = "card unpaired"></div>
+      <div class = "card unpaired"></div>
+      <div class = "card unpaired"></div>
+      <div class = "card unpaired"></div>
+    </div>
+
+    <div class='winScreen'>
+
+    <button class="restart2">Homepage</button>
+      <button class="restart3">Homepage</button>
+
+    </div>
+
+    <div class='lossScreen'>
+      <button class="restart-current-level" data-level="1">Retry Level</button>
+      <button class="restart">Homepage</button>
+    </div>
+
+  </body>
+  </html>
